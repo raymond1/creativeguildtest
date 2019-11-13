@@ -1,1 +1,24 @@
-//
+html{
+    background: #0f0;
+}
+
+body.bodyGradientLinear{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    background-image: linear-gradient(to bottom,  rgba(216,234,234, 100%) 0, rgba(128,111,88, 100%) 100%);
+    margin: 0;
+}
+
+div.bodyGradientRadial{
+    background-image: radial-gradient(circle at 33%,  rgba(247,212,177, 100%) 0, rgba(0, 0, 0, 10%) 100%);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+}
