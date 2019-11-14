@@ -27,15 +27,21 @@
 .profileSection{
     background: #fff;
     border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10em;
+    margin-right: 10em;
     margin-top: 20px;
-    padding: 10px;
     display: flex;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 30px;
     padding-bottom: 30px;
+    @media only screen and (max-width: 768px) {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    @media only screen and (max-width: 600px) {
+        flex-flow: row wrap;
+    }
 }
 
 .profileSectionPicture{
@@ -46,6 +52,7 @@
 
 .profileSectionDetails{
     display: flex;
+    flex-flow: row wrap;
 }
 
 .profileSectionName{
