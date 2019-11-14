@@ -3,20 +3,26 @@ import React, { Component } from 'react';
 export default class Profile extends Component {
     render() {
         return (
-            <div className='profileBubble'>
-                <div className='profilePictureContainer'>
-                    <img src={this.props.profile_picture} alt='Profile picture' className='profilePictureImage'></img>
+            <div className='profileSection'>
+                <div className='profileSectionPictureContainer'>
+                    <img src={this.props.profile_picture} alt='Profile picture' className='profileSectionPicture'></img>
                 </div>
-                <div className='profileTextContainer'>
-                    <h1>{this.props.name}</h1>
-                    <h2>Bio</h2>
-                    <p>{this.props.bio}</p>
-                </div>
-                <div className='profileTextContainer'>
-                    <h2>Phone</h2>
-                    <span>{this.props.phone}</span>
-                    <h2>Email</h2>
-                    <span>{this.props.email}</span>
+                <div className='profileSectionTextContainer'>
+                    <div className='profileSectionName'>
+                        <h1>{this.props.name}</h1>
+                    </div>
+                    <div className='profileSectionDetails'>
+                        <div className='profileSectionDetailsTextContainer'>
+                            <h2>Bio</h2>
+                            <p>{this.props.bio}</p>
+                        </div>
+                        <div className='profileSectionDetailsTextContainer'>
+                            <h2>Phone</h2>
+                            <span>{this.props.phone}</span>
+                            <h2>Email</h2>
+                            <span>{this.props.email}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
