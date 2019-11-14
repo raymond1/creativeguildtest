@@ -1,8 +1,4 @@
-html{
-    background: #0f0;
-}
-
-body.bodyGradientLinear{
+.mainBackgroundLinear{
     position: absolute;
     top: 0;
     left: 0;
@@ -13,7 +9,7 @@ body.bodyGradientLinear{
     margin: 0;
 }
 
-div.bodyGradientRadial{
+.mainBackgroundRadial{
     background-image: radial-gradient(circle at 33%,  rgba(247,212,177, 100%) 0, rgba(0, 0, 0, 10%) 100%);
     z-index: 2;
     position: absolute;
