@@ -11,7 +11,7 @@
 
 .mainBackgroundRadial{
     background-image: radial-gradient(circle at 33%,  rgba(247,212,177, 100%) 0, rgba(0, 0, 0, 10%) 100%);
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
@@ -23,8 +23,27 @@
 .profileBubble{
     background: #fff;
     border-radius: 10px;
-    max-width: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.profilePictureImage{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.profileTextContainer{
+    padding: 20px;
 }
