@@ -10,5 +10,9 @@
     <body class='bodyGradientLinear'>
         <div class='bodyGradientRadial'>
         </div>
+
+        <div id='root'></div>
+        <script src='js/app.js'></script>
+
     </body>
 </html>
