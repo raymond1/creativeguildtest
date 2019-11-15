@@ -13,7 +13,7 @@ export default class Album extends Component {
             <div className="mainBackgroundLinear">
                 <div className="mainBackgroundRadial">
                     <Profile profile_picture={this.state.profile_picture} name={this.state.name} phone={this.state.phone} email={this.state.email} bio={this.state.bio}></Profile>
-                    <Tiles></Tiles>
+                    <Tiles album={this.state.album}></Tiles>
                 </div>
             </div>
         );

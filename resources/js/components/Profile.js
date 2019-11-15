@@ -12,7 +12,7 @@ export default class Profile extends Component {
                         <h1>{this.props.name}</h1>
                     </div>
                     <div className='profileSectionDetails'>
-                        <div className='profileSectionDetailsTextContainer'>
+                        <div className='profileSectionDetailsTextContainer profileSectionDetailsBio'>
                             <h2>Bio</h2>
                             <p>{this.props.bio}</p>
                         </div>
@@ -26,8 +26,5 @@ export default class Profile extends Component {
                 </div>
             </div>
         );
-    }
-
-    componentDidMount(){
     }
 }

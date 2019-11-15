@@ -7,10 +7,7 @@
         <title>Album</title>
         <link rel="stylesheet" type="text/css" href="css/app.css">
     </head>
-    <body class='bodyGradientLinear'>
-        <div class='bodyGradientRadial'>
-        </div>
-
+    <body>
         <div id='root'></div>
         <script src='js/app.js'></script>
 
