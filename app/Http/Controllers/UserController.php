@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 
-class UserApiController extends Controller
+class UserController extends Controller
 {
     public function index() {
         return User::all();
@@ -25,7 +25,9 @@ class UserApiController extends Controller
     }
 
     public function show($id) {
-        return User::find($id);
+        $user = User::with('album')->find($id);
+        //$user->album = $user->albums();
+        return $user->toArray();
     }
 
     public function update(Request $request, $id) {
@@ -38,10 +40,15 @@ class UserApiController extends Controller
         $user->save();
     
         return response()->json([
-            "message" => "user record created"
+            "message" => "user record updated"
         ], 200);
     }
 
-    public function deleteUser ($id) {
+    public function destroy ($id) {
+        $user = User::find($id);
+        $user->delete();
+        return response()->json([
+            "message" => "user record deleted"
+        ], 200);
     }
 }

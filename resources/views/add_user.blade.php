@@ -9,13 +9,13 @@
     </head>
     <body>
     'name', 'phone','email','bio', 'profile_picture'
-        <form action=/api/users/2 method="post">
+        <form action=/api/users method="post">
             Name:<input name="name"><br>
             Phone:<input name=phone><br>
             Email: <input name=email><br>
             Bio:<input name=bio><br>
             Profile Picture:<input name=profile_picture><br>
-            <input type="hidden" name="_method" value="put" />
+<!--            <input type="hidden" name="_method" value="delete" />-->
             <input type='submit'>
         </form>
     </body>

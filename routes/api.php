@@ -25,4 +25,5 @@ Route::post('users', 'UserApiController@createUser');
 Route::put('users/{id}', 'UserApiController@updateUser');
 Route::delete('users/{id}','UserApiController@deleteUser');
 */
-Route::resource('users', 'UserApiController');
+Route::resource('users', 'UserController');
+Route::resource('albums', 'AlbumController');

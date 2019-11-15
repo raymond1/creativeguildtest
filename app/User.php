@@ -14,4 +14,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'phone','email','bio', 'profile_picture'
     ];
+
+    public function album(){
+        return $this->hasMany('App\Album','user_id');
+    }
 }

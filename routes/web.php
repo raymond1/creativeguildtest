@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function(){
-    return view('test');
+Route::get('add_user', function(){
+    return view('add_user');
+});
+
+Route::get('add_album', function(){
+    return view('add_album');
 });
