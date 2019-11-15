@@ -110,7 +110,19 @@ html, body{
     margin-top: 1em;
     margin-left: 10em;
     margin-right: 10em;
+    @media only screen and (max-width: 1270px) {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+    @media only screen and (max-width: 794px) {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
     justify-content: space-between;
+    @media only screen and (max-width: 1270px) {
+        justify-content: center;
+    }
 }
 
 $tileWidth: 300px;
@@ -123,14 +135,14 @@ $tileHeight: $tileWidth;
     width: $tileWidth;
     height: $tileHeight;
     img{
-        width: $tileWidth;
+        height: $tileWidth * 0.65;
     }
     h2{
         font-size: 18px;
         color: white;
         position: absolute;
-        top: 100px;
-        left: 20px;
+        top: 150px;
+        left: 10px;
     }
     p{
         font-size: 12px;
@@ -142,7 +154,23 @@ $tileHeight: $tileWidth;
 }
 
 .tileBottom{
-    border: 1px red solid;
+    text-align: justify;
+    text-justify: inter-word;
     padding-left: 1.5em;
     padding-right: 1.5em;
+}
+
+.tileHeartDate{
+    img{
+        visibility: hidden;
+        height: 20px;
+    }
+    img.tileHeartFeatured{
+        visibility: visible;
+    }
+
+    .tileDate{
+        color: rgb(154,154,154);
+        float: right;
+    }
 }
