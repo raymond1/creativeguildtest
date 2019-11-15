@@ -6,14 +6,17 @@ use Illuminate\Http\Request;
 
 class UserApiController extends Controller
 {
-    public function getAllUsers() {
-
+    public function index() {
+        return User::all();
     }
-  
-    public function createUser(Request $request) {
+
+    public function store(Request $request) {
         $user = new User;
         $user->name = $request->name;
-        $user->course = $request->course;
+        $user->phone = $request->phone;
+        $user->email = $request->email;
+        $user->bio = $request->bio;
+        $user->profile_picture = $request->profile_picture;
         $user->save();
     
         return response()->json([
@@ -21,10 +24,22 @@ class UserApiController extends Controller
         ], 201);
     }
 
-    public function getUser($id) {
+    public function show($id) {
+        return User::find($id);
     }
 
-    public function updateUser(Request $request, $id) {
+    public function update(Request $request, $id) {
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->phone = $request->phone;
+        $user->email = $request->email;
+        $user->bio = $request->bio;
+        $user->profile_picture = $request->profile_picture;
+        $user->save();
+    
+        return response()->json([
+            "message" => "user record created"
+        ], 200);
     }
 
     public function deleteUser ($id) {
