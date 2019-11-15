@@ -15,6 +15,7 @@
             Email: <input name=email><br>
             Bio:<input name=bio><br>
             Profile Picture:<input name=profile_picture><br>
+            <input type='submit'>
         </form>
     </body>
 </html>
