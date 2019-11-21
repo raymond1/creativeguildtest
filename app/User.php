@@ -14,8 +14,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'phone','email','bio', 'profile_picture'
     ];
-
+    protected $appends = array('album');
     public function album(){
-        return $this->hasMany('App\Album','user_id');
+        return $this->hasMany('App\Album');
+    }
+
+    public function getAlbumAttribute(){
+        return $this->album();
     }
 }

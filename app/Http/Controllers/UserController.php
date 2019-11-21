@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index() {
-
-        $users = User::all();//with('album');
-
-        return $users->toArray();
+        $users = User::with('album')->get();
+        return $users;
     }
 
     public function store(Request $request) {
