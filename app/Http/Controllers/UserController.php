@@ -27,8 +27,7 @@ class UserController extends Controller
 
     public function show($id) {
         $user = User::with('album')->find($id);
-        //$user->album = $user->albums();
-        return $user->toArray();
+        return response()->json($user);
     }
 
     public function update(Request $request, $id) {

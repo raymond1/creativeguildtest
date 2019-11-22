@@ -20,7 +20,7 @@ export default class Album extends Component {
     }
 
     componentDidMount() {
-        fetch("landscapes.json")
+        fetch("/api/users/8")
             .then(res => res.json())
             .then(
                 (result) => {

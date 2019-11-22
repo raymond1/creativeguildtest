@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'SiteController@index');
+/*{
+    //function () {
     return view('welcome');
 });
-
+*/
 Route::get('add_user', function(){
     return view('add_user');
 });
